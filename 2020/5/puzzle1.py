@@ -10,9 +10,9 @@ def find_seat():
     for line in lines:
         row_data = line[:7]
         seat_data = line[7:]
-        row_number = search(row_data, 0, 127)
+        row_number = search(row_data, 0, 128)
 
-        seat_number = search(seat_data, 0, 7)
+        seat_number = search(seat_data, 0, 6)
 
         calc = row_number * 8 + seat_number
         if calc > largest:
